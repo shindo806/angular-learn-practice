@@ -1,9 +1,16 @@
-<app-header (onFeatureChanged)="featureChanged($event)"></app-header>
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <app-recipes *ngIf="currentFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="currentFeature === 'shopping-list'"></app-shopping-list>
-    </div>
+  <div *appUnless="false">
+    <li appBetterHighlight>4</li>
+    <li appBetterHighlight>2</li>
   </div>
+  <p appBasicHighlight>Style me with basic directive attribute</p>
+  <p appBetterHighlight [defaultColor]="'goldenrod'">
+    Style me with better directive attribute
+  </p>
+</div>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">Value is 5</p>
+  <p *ngSwitchCase="10">Value is 10</p>
+  <p *ngSwitchCase="100">Value is 100</p>
+  <p *ngSwitchDefault>Value is default</p>
 </div>

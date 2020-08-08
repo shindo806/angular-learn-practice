@@ -1,9 +1,13 @@
-<app-header (onFeatureChanged)="featureChanged($event)"></app-header>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <app-recipes *ngIf="currentFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="currentFeature === 'shopping-list'"></app-shopping-list>
+    <div class="col-xs-12">
+      <app-add-account></app-add-account>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-account-list></app-account-list>
     </div>
   </div>
 </div>

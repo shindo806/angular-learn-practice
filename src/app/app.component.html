@@ -7,7 +7,8 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-account-list></app-account-list>
+      <app-account-list *ngFor="let account of accounts; index as idx;" [account]="account" [id]="idx">
+      </app-account-list>
     </div>
   </div>
 </div>

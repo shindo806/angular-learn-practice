@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-account-list',
@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-list.component.css'],
 })
 export class AccountListComponent implements OnInit {
-  accounts = [{}];
+  @Input() account: {
+    name: string;
+    type: string;
+  };
+  @Input() id: number;
   constructor() {}
 
   ngOnInit(): void {}

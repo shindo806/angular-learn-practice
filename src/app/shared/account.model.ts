@@ -1,6 +1,5 @@
-export Account :{
-name: string,
-type: string,
-description: string,
-
+export interface Account {
+  name: string;
+  type: string;
+  description: string;
 }

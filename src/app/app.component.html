@@ -1,14 +1,4 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <app-add-account></app-add-account>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <app-account-list *ngFor="let account of accounts; index as idx;" [account]="account" [id]="idx">
-      </app-account-list>
-    </div>
-  </div>
+  <app-active-user></app-active-user>
+  <app-inactive-user></app-inactive-user>
 </div>

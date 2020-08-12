@@ -1,0 +1,9 @@
+<div class="row mt-5">
+  <div class="col-xs-12">
+    <h3>Inactive Users</h3>
+    <ul class="list-group" *ngFor="let user of users; index as id">
+      <li class="list-group-item">{{user}} | <button (click)="setToActive(id)" class="btn btn-primary ml-2">Set to
+          Active</button></li>
+    </ul>
+  </div>
+</div>

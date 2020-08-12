@@ -1,22 +1,16 @@
-import { LogginService } from './logging.service';
-import { AccountService } from './accounts.service';
+import { CounterService } from './counter.service';
+import { UserService } from './user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AddAccountComponent } from './add-account/add-account.component';
-import { AccountListComponent } from './account-list/account-list.component';
-import { AccountDetailComponent } from './account-list/account-detail/account-detail.component';
+import { ActiveUserComponent } from './active-user/active-user.component';
+import { InactiveUserComponent } from './inactive-user/inactive-user.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddAccountComponent,
-    AccountListComponent,
-    AccountDetailComponent,
-  ],
+  declarations: [AppComponent, ActiveUserComponent, InactiveUserComponent],
   imports: [BrowserModule, FormsModule],
-  providers: [AccountService, LogginService],
+  providers: [UserService, CounterService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

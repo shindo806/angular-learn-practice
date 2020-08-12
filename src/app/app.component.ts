@@ -1,4 +1,3 @@
-import { AccountService } from './accounts.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  accounts: { name: string; type: string }[] = [];
-  constructor(private accountService: AccountService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.accounts = this.accountService.accounts;
-  }
+  ngOnInit() {}
 }
